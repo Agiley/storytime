@@ -115,7 +115,7 @@ module Storytime
   @@search_adapter = ''
 
   class << self
-    attr_accessor :layout, :media_storage, :s3_bucket, :post_types
+    attr_accessor :layout, :media_storage, :s3_bucket, :s3_region, :post_types
     
     def configure
       self.post_types ||= []

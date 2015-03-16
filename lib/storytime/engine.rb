@@ -39,7 +39,8 @@ module Storytime
           config.fog_credentials = {
             :provider               => 'AWS',
             :aws_access_key_id      => ENV['STORYTIME_AWS_ACCESS_KEY_ID'],
-            :aws_secret_access_key  => ENV['STORYTIME_AWS_SECRET_KEY']
+            :aws_secret_access_key  => ENV['STORYTIME_AWS_SECRET_KEY'],
+            :region                 => Storytime.s3_region || 'us-east-1'
           }
           config.fog_directory  = Storytime.s3_bucket
           config.fog_public     = true
